@@ -1,0 +1,187 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap");
+
+:root {
+  --main-text-color: #1d1f24;
+  --point-color: #ff565c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 20px 21px 20px;
+  color: var(--main-text-color);
+  border-bottom: 1px solid #ebebeb;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  z-index: 9;
+}
+
+.main-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.main-logo > span {
+  margin-left: 2px;
+  margin-bottom: 2px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--point-color);
+}
+
+.logo-dark {
+  color: #f9fafc;
+  opacity: 0.2;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button-container {
+  width: 30px;
+  height: 100%;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  position: absolute;
+  width: 27px;
+  height: 2px;
+  background-color: var(--main-text-color);
+}
+
+.menu-button::before {
+  content: " ";
+  margin-top: -8px;
+  height: 2px;
+}
+
+.menu-button::after {
+  content: " ";
+  margin-top: 8px;
+  height: 2px;
+}
+
+#body-content {
+  min-height: calc(100vh - 441px);
+  padding-top: 70px;
+}
+
+footer {
+  background-color: #1d1f24;
+  padding: 40px 20px 0px 20px;
+  height: 441px;
+}
+
+footer span {
+  color: white;
+  opacity: 0.7;
+  font-size: 1.4em;
+}
+
+.corporation {
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.subscribe-wrapper {
+  height: 35px;
+  width: 300px;
+  display: flex;
+}
+
+.subscribe-wrapper > input {
+  box-sizing: border-box;
+  border: none;
+  height: 100%;
+  width: 180px;
+  padding: 7px 15px;
+}
+
+.subscribe-wrapper > button {
+  border: none;
+  height: 100%;
+  background-color: var(--point-color);
+  color: white;
+  font-weight: 500;
+  width: 120px;
+  font-size: 1.2em;
+}
+
+.sns-button-wrapper {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  height: 22px;
+  width: 194px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sns-button-wrapper svg {
+  box-sizing: border-box;
+  display: block;
+  height: 16px;
+  width: 16px;
+}
+
+.sns-button-wrapper span {
+  width: 62px;
+  display: block;
+  white-space: nowrap;
+}
+
+.sitemap {
+  width: 231px;
+  gap: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 1.4em;
+  font-weight: 500;
+  font-family: "Oswald";
+}
+
+.sitemap li {
+  width: 46%;
+  letter-spacing: 1.75px;
+  word-wrap: break-word;
+  height: 21px;
+}
+
+a .hidden-text {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.hidden-svg {
+  display: none;
+}
