@@ -21,6 +21,10 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.hidden-text {
+  display: none !important;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -86,9 +90,94 @@ header {
   height: 2px;
 }
 
-#body-content {
+section {
   min-height: calc(100vh - 441px);
   padding-top: 70px;
+  background-color: #f9fafc;
+  padding: 90px 20px 20px 20px;
+}
+
+.card {
+  background-color: black;
+  position: relative;
+}
+
+.bg-image {
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+}
+
+.bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card.main {
+  position: relative;
+  padding: 87px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card > h1:hover {
+  text-decoration: underline;
+}
+
+.card.main > h1 {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.6em;
+  color: white;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  line-height: 39.2px;
+  word-wrap: break-word;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 77px;
+}
+
+.logo-finance {
+  position: relative;
+  text-transform: uppercase;
+  width: 107px;
+  height: 40px;
+  background-color: var(--point-color);
+  font-family: "Oswald";
+  color: white;
+  font-size: 1.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-footer {
+  position: relative;
+  display: flex;
+  width: 185px;
+  height: 30px;
+  gap: 16px;
+  color: white;
+  font-size: 1.3em;
+}
+
+.card-footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+}
+
+.card-footer svg {
+  box-sizing: border-box;
+  display: block;
+  height: 20px;
+  width: 20px;
 }
 
 footer {
@@ -171,10 +260,6 @@ footer span {
   letter-spacing: 1.75px;
   word-wrap: break-word;
   height: 21px;
-}
-
-a .hidden-text {
-  display: none;
 }
 
 a {
