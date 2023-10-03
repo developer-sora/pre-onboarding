@@ -100,6 +100,10 @@ section {
 .card {
   background-color: black;
   position: relative;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  min-height: 27.4em;
 }
 
 .bg-image {
@@ -116,22 +120,39 @@ section {
 
 .card.main {
   position: relative;
-  padding: 87px 30px 30px 30px;
+  padding: 87px 30px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 44.1em;
+}
+
+.card.main a {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
-.card > h1:hover {
+.card h1:hover {
   text-decoration: underline;
 }
 
-.card.main > h1 {
+.card h1 {
+  position: relative;
+  font-size: 2.4em;
+  color: white;
+  line-height: 30px;
+  word-wrap: break-word;
+  margin-top: 22px;
+  padding-left: 25px;
+}
+
+.card.main h1 {
   position: relative;
   font-weight: 500;
   font-size: 2.6em;
+  padding: 0;
   color: white;
   font-family: "Oswald";
   text-transform: uppercase;
@@ -139,10 +160,9 @@ section {
   word-wrap: break-word;
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 77px;
 }
 
-.logo-finance {
+.logo-card {
   position: relative;
   text-transform: uppercase;
   width: 107px;
@@ -157,13 +177,20 @@ section {
 }
 
 .card-footer {
-  position: relative;
+  position: absolute;
   display: flex;
   width: 185px;
   height: 30px;
   gap: 16px;
   color: white;
   font-size: 1.3em;
+  bottom: 25px;
+  left: 20px;
+}
+
+.main .card-footer {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .card-footer > div {
@@ -184,12 +211,16 @@ footer {
   background-color: #1d1f24;
   padding: 40px 20px 0px 20px;
   height: 441px;
+  color: white;
 }
 
 footer span {
-  color: white;
   opacity: 0.7;
   font-size: 1.4em;
+}
+
+footer a {
+  color: white;
 }
 
 .corporation {
@@ -264,9 +295,61 @@ footer span {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--main-text-color);
 }
 
 .hidden-svg {
   display: none;
+}
+
+.stories {
+  border: 1px solid #f2f3f6;
+  background-color: white;
+  padding-top: 35px;
+  margin-bottom: 18px;
+}
+
+.stories strong {
+  font-family: "Oswald";
+  font-size: 1.4em;
+  color: var(--main-text-color);
+  padding-left: 27.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.53px;
+  word-wrap: break-word;
+}
+
+.stories li {
+  font-size: 1.8em;
+  color: var(--main-text-color);
+  padding: 28px 73px 29px 26px;
+  line-height: 26px;
+  border-bottom: 1px solid #f2f3f6;
+  display: flex;
+}
+
+.stories a :hover {
+  text-decoration: underline;
+}
+
+.stories span {
+  display: block;
+  margin-left: 26px;
+}
+
+/*ol 숫자 뒤에 . 지우기*/
+ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+
+ol li {
+  display: block;
+}
+
+ol li:before {
+  font-family: Oswald;
+  opacity: 0.17;
+  content: counter(item) "  ";
+  counter-increment: item;
 }
